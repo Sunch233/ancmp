@@ -83,4 +83,10 @@ float android_exp2f(float x) FLOAT_ABI_FIX;
 
 double android_exp2(double x) FLOAT_ABI_FIX;
 
+double android_rint(double x) FLOAT_ABI_FIX;
+
+double android_trunc(double x) FLOAT_ABI_FIX;
+
+double android_round(double x) FLOAT_ABI_FIX;
+
 #endif

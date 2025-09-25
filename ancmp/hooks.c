@@ -995,6 +995,18 @@ static hook_t math_hooks[] = {
         (void *)android_exp2
     },
     {
+        "rint",
+        (void *)android_rint
+    },
+    {
+        "trunc",
+        (void *)android_trunc
+    },
+    {
+        "round",
+        (void *)android_round
+    },
+    {
         (char *)NULL,
         (void *)NULL
     }

@@ -163,3 +163,32 @@ FLOAT_ABI_FIX float android_exp2f(float x) {
 FLOAT_ABI_FIX double android_exp2(double x) {
     return pow(2.0, x);
 }
+
+FLOAT_ABI_FIX double android_rint(double x) {
+    double floorx = floor(x);
+    double diff = x - floorx;
+
+    if (diff < 0.5) {
+        return floorx;
+    } else if (diff > 0.5) {
+        return floorx + 1.0;
+    } else {
+        if (fmod(floorx, 2.0) == 0.0) {
+            return floorx;
+        } else {
+            return floorx + 1.0;
+        }
+    }
+}
+
+FLOAT_ABI_FIX double android_trunc(double x) {
+    return (x >= 0.0) ? floor(x) : ceil(x);
+}
+
+FLOAT_ABI_FIX double android_round(double x) {
+    if (x >= 0.0) {
+        return floor(x + 0.5);
+    } else {
+        return ceil(x - 0.5);
+    }
+}
