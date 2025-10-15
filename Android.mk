@@ -99,6 +99,8 @@ LOCAL_SRC_FILES := \
     ./ancmp/android_pthread_key.c \
     ./ancmp/android_pthread_mutex.c \
     ./ancmp/android_pthread_threads.c \
+    ./ancmp/android_semaphore.c \
+    ./ancmp/ancmp_rng.c \
     ./ancmp/android_socket.c \
     ./ancmp/android_sprint.c \
     ./ancmp/android_stat.c \
