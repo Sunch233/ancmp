@@ -22,4 +22,6 @@ endif()
 
 if (WIN32)
     target_link_libraries(ancmp ws2_32)
+else()
+    target_compile_definitions(ancmp PRIVATE _TIME_BITS=32)
 endif()
